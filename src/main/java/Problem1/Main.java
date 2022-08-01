@@ -3,34 +3,29 @@ package Problem1;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Select the option: \n 1.2D  \n 2.3D");
-        int choice = sc.nextInt();
-        int length, breadth;
+
+    public int findArea(int length, int breadth, int height) {
+        int choice = 0;
+        choice = height == 0 ? 1 : 2;
         switch (choice) {
             case 1:
-                System.out.println("Enter the length");
-                length = sc.nextInt();
-                System.out.println("Enter the Breadth");
-                breadth = sc.nextInt();
                 Box3D objArea = new Box3D(length,breadth);
                 int area = objArea.area();
-                System.out.println("Area: " + area);
-                break;
+                return area;
             case 2:
-                System.out.println("Enter the length");
-                length = sc.nextInt();
-                System.out.println("Enter the Breadth");
-                breadth = sc.nextInt();
-                System.out.println("Enter the height");
-                int height = sc.nextInt();
                 Box3D objVolume = new Box3D(length,breadth,height);
                 int volume = objVolume.volume();
-                System.out.println("Volume: "+ volume);
-                break;
+                return volume;
             default:
                 System.out.println("Invalid options");
         }
+        return 0;
+    }
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        Main ob = new Main();
+        ob.findArea(1,4,0);
+        ob.findArea(1,4,5);
+
     }
 }

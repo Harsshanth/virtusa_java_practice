@@ -7,7 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="untitled" />
+        <module name="Virtusa_java_practise" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="Virtusa_Java_practice" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>

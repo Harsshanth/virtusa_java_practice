@@ -2,7 +2,6 @@ package Problem1;
 
 public class Box3D extends Box {
     int height;
-
     Box3D() {
         super();
         this.height = 0;
